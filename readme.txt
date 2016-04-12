@@ -1,6 +1,6 @@
 # README #
 
-A Symbian S60 music player app demo for teaching purposes.
+A Symbian S60 memory game app demo for teaching purposes.
 
 ### Who do I talk to? ###
 
