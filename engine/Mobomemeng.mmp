@@ -1,0 +1,28 @@
+// Repeateng.mmp
+//
+
+TARGET			MoboMemeng.dll
+TARGETTYPE		dll
+UID			0x1000008d 0x01826740
+SOURCEPATH		..\engine
+
+// Remove from student version:
+SOURCE			Engine.cpp
+SOURCE			Controller.cpp
+SOURCE			MoboSymbol.cpp
+SOURCE			HallOfFame.cpp
+SOURCE			HallOfFameItem.cpp
+SOURCE			CleanupFileEraser.cpp
+
+// Given to students:
+SOURCE			EngineFactory.cpp
+
+
+USERINCLUDE		..\inc
+SYSTEMINCLUDE		\epoc32\include
+LIBRARY			euser.lib
+LIBRARY			bafl.lib
+LIBRARY			efsrv.lib
+LIBRARY			estor.lib
+
+EXPORTUNFROZEN

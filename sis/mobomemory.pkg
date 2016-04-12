@@ -1,0 +1,16 @@
+; HelloWorldPlus.pkg
+;
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"MoboMemory"},(0x01abc123),1,0,0
+
+;Supports Series 60 v 1.2
+(0x101F8202), 0, 0, 0, {"Series60ProductID"}
+; 0.9 is (0x101F6F88),
+;
+"C:\Symbian\Series60_1_2_CW\epoc32\release\armi\urel\MoboMemory.APP"-"C:\system\apps\MoboMemory\MoboMemory.app"
+"C:\Symbian\Series60_1_2_CW\epoc32\release\WINSCW\UDEB\Z\SYSTEM\APPS\MOBOMEMORY\MoboMemory.rsc"-"C:\system\apps\MoboMemory\MoboMemory.rsc"
+"C:\Symbian\Series60_1_2_CW\epoc32\release\WINSCW\UDEB\Z\SYSTEM\APPS\MOBOMEMORY\MoboMemory_caption.rsc"-"C:\system\apps\MoboMemory\MoboMemory_caption.rsc"
+"C:\Symbian\Series60_1_2_CW\epoc32\release\armi\urel\MoboMemeng.dll"-"C:\system\apps\MoboMemory\MoboMemEng.dll"

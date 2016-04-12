@@ -1,0 +1,195 @@
+/* Copyright (c) 2002, Nokia Mobile Phones. All rights reserved */
+
+NAME HELL
+
+#include <eikon.rh>
+#include <eikon.rsg>
+#include <avkon.rh>
+#include <avkon.rsg>
+
+#include "HelloWorldPlus.hrh"
+
+
+// ---------------------------------------------------------
+//   
+//    Define the resource file signature 
+//    This resource should be empty.
+//
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+//   
+//    Default Document Name
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name { buf=""; }
+
+// ---------------------------------------------------------
+//   
+//    Define default menu and CBA key.
+//
+// ---------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+	{
+	menubar = r_helloworldplus_menubar;
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	}
+
+
+// ---------------------------------------------------------
+//   
+//   r_helloworldplus_menubar
+//   Menubar for HelloWorldPlus example
+//
+// ---------------------------------------------------------
+//
+RESOURCE MENU_BAR r_helloworldplus_menubar
+	{
+	titles =
+		{
+		MENU_TITLE {menu_pane = r_helloworldplus_menu;}
+		};
+	}
+
+
+// ---------------------------------------------------------
+//   
+//   r_helloworldplus_menu
+//   Menu for "Options"
+//
+// ---------------------------------------------------------
+//
+RESOURCE MENU_PANE r_helloworldplus_menu
+	{
+	items = 
+		{
+		// added the new Options menu command here
+		MENU_ITEM 
+			{
+			command = EMoboMemGameNewCommand;  
+			txt = "New Game";
+			},
+		MENU_ITEM 
+			{
+			command = EMoboMemGameViewHallOfFame;  
+			txt = "Hall of Fame";
+			},
+		MENU_ITEM 
+			{
+			command = EMoboMemGameClearHallofFameCommand; 
+			txt = "Clear Hall of Fame";
+			},         
+		MENU_ITEM 
+			{
+			command = EAknSoftkeyExit;   
+			txt = "Exit";
+			}
+		};
+	}
+
+
+RESOURCE MENU_BAR r_hall_of_fame_list_menubar
+	{
+	titles =
+		{
+		MENU_TITLE
+			{
+			menu_pane = R_AVKON_MENUPANE_SELECTION_LIST;
+			}
+		};
+	}
+	
+	
+RESOURCE DIALOG r_hall_of_fame_dialog
+	{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+		{
+		AVKON_LIST_QUERY_DLG_LINE 
+			{
+			control = AVKON_LIST_QUERY_CONTROL
+				{
+				listtype = EAknCtSinglePopupMenuListBox;
+				listbox = AVKON_LIST_QUERY_LIST
+					{
+					};
+				heading = "Hall of Fame";
+				};
+			}
+		};
+	}
+
+RESOURCE DIALOG r_mobomem_clear_hall_of_fame_confirmation
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_YES_NO;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationQueryLayout;
+                label = "Clear?";
+                };
+            }
+        };
+    }
+	
+// ---------------------------------------------------------
+//   
+//    New string resource
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF32 r_new_string_resource 
+	{ 
+	buf="This is MoboMemory!"; 
+	}
+	
+
+RESOURCE TBUF r_entered_hall_of_fame
+	{ 
+	buf=" Hall of Fame result!"; 
+	}
+	
+
+RESOURCE TBUF r_game_ended_string
+	{ 
+	buf="Time: %d sec, penalties: %d sec."; 
+	}
+	
+	
+RESOURCE TBUF r_get_player_name_prompt
+	{ 
+	buf="Player name"; 
+	}
+	
+RESOURCE TBUF r_hall_of_fame_date_format
+	{ 
+	buf="%D%M%Y%/0%1%/1%2%/2%3%/3"; 
+	}
+	
+RESOURCE TBUF r_hall_of_fame_result_format
+	{ 
+	buf="%d-%S-%S"; 
+	}
+	
+RESOURCE TBUF r_number_of_pairs_prompt
+	{ 
+	buf="Number of Pairs"; 
+	}
+
+RESOURCE TBUF r_clear_hall_of_fame_prompt
+	{ 
+	buf="Clear Hall of Fame?"; 
+	}
+
+	

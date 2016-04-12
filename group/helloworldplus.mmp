@@ -1,0 +1,32 @@
+TARGET            MoboMemory.app
+TARGETTYPE        app
+
+// change the second number here ot change the UID for this application
+UID               0x100039CE 0x01abc123
+TARGETPATH        \system\apps\MoboMemory
+
+SOURCEPATH        ..\src
+SOURCE            HelloWorldPlus.cpp
+SOURCE            HelloWorldPlusApplication.cpp 
+SOURCE            HelloWorldPlusAppView.cpp
+SOURCE            HelloWorldPlusAppUi.cpp
+SOURCE            HelloWorldPlusDocument.cpp 
+SOURCE				MoboViewRenderer.cpp
+
+SOURCEPATH        ..\group
+RESOURCE          MoboMemory.rss
+RESOURCE          MoboMemory_caption.rss
+
+USERINCLUDE       ..\inc 
+
+SYSTEMINCLUDE     \epoc32\include
+
+LIBRARY           euser.lib
+LIBRARY           apparc.lib
+LIBRARY           cone.lib 
+LIBRARY           eikcore.lib  
+LIBRARY				bafl.lib
+LIBRARY           avkon.lib 
+LIBRARY           commonengine.lib
+LIBRARY				gdi.lib
+LIBRARY				mobomemeng.lib
