@@ -1,3 +1,13 @@
+# README #
+
+A Symbian S60 music player app demo for teaching purposes.
+
+### Who do I talk to? ###
+
+* Antti Juustila, University of Oulu, Finland
+
+### Installation ###
+
 How to install application binaries into the Series 60 emulator?
 
 1. Create a directory for the application
@@ -11,4 +21,3 @@ How to install application binaries into the Series 60 emulator?
  - you should be able so see MMem app on the application list. Run it.
 
 If you are using the Metrowerks Codewarrior version of the Series 60 SDK, replace wins with winscw.
-
